@@ -1,0 +1,6 @@
+{
+  "name": "出貨明細與外箱標籤智慧核對系統",
+  "description": "具備 Excel 明細匯入、逐箱清點、AI 標籤 OCR 辨識、雙重數量核對、異常複核管理與出庫放行管制的智慧出貨核對平台。",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
