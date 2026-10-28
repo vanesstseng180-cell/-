@@ -28,6 +28,12 @@ jobs:
         run: npm install --no-audit --no-fund
       - name: Build Vite website
         run: npm run build
+      - name: Verify generated website
+        run: |
+          test -s dist/index.html
+          test -d dist/assets
+          grep -q '/-/assets/' dist/index.html
+          echo 'Website HTML and compiled assets are present.'
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload site
