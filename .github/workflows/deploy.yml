@@ -25,7 +25,12 @@ jobs:
         with:
           node-version: '22'
       - name: Install dependencies
-        run: npm install --no-audit --no-fund
+        run: npm install --no-audit --no-fund --legacy-peer-deps
+      - name: Show build environment
+        run: |
+          node --version
+          npm --version
+          npm ls vite react react-dom @vitejs/plugin-react --depth=0 || true
       - name: Build Vite website
         run: npm run build
       - name: Verify generated website
